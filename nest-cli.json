@@ -8,15 +8,6 @@
     "tsConfigPath": "apps/shop-core/tsconfig.app.json"
   },
   "projects": {
-    "shop-core": {
-      "type": "application",
-      "root": "apps/shop-core",
-      "entryFile": "main",
-      "sourceRoot": "apps/shop-core/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/shop-core/tsconfig.app.json"
-      }
-    },
     "products": {
       "type": "application",
       "root": "apps/products",
@@ -24,6 +15,15 @@
       "sourceRoot": "apps/products/src",
       "compilerOptions": {
         "tsConfigPath": "apps/products/tsconfig.app.json"
+      }
+    },
+    "api": {
+      "type": "application",
+      "root": "apps/api",
+      "entryFile": "main",
+      "sourceRoot": "apps/api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api/tsconfig.app.json"
       }
     }
   }
