@@ -2,18 +2,21 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
 @Schema({ timestamps: true })
-export class UsersCollection extends Document {
+export class UsersEntity extends Document {
+  @Prop({ default: null, index: true })
+  name: string;
+
+  @Prop({ default: null, index: true })
+  family: string;
+
   @Prop({ required: true, unique: true, index: true })
-  wallet_address: string;
+  email_address: string;
 
-  @Prop({ default: null })
-  assets_synced: Date;
-
-  @Prop({ default: null })
-  opensea_synced_at: Date;
+  @Prop({ required: true, unique: true, index: true })
+  phone: string;
 
   @Prop({ default: null })
   status: string;
 }
 
-export const UsersSchema = SchemaFactory.createForClass(UsersCollection);
+export const UsersSchema = SchemaFactory.createForClass(UsersEntity);
